@@ -8,13 +8,13 @@ public class Card {
 
 	private Value value;
 	private Symbol symbol;
-	private int numbericalValue;
+	private int trueValue;
 
-	public Card(Value value, Symbol symbol, int numbericalValue) {
+	public Card(Value value, Symbol symbol, int trueValue) {
 		super();
 		this.value = value;
 		this.symbol = symbol;
-		this.numbericalValue = numbericalValue;
+		this.trueValue = trueValue;
 	}
 	
 	public Value getValue() {
@@ -29,16 +29,16 @@ public class Card {
 	public void setSymbol(Symbol symbol) {
 		this.symbol = symbol;
 	}
-	public int getNumbericalValue() {
-		return numbericalValue;
+	public int getTrueValue() {
+		return trueValue;
 	}
-	public void setNumbericalValue(int numbericalValue) {
-		this.numbericalValue = numbericalValue;
+	public void setTrueValue(int trueValue) {
+		this.trueValue = trueValue;
 	}
 
 	@Override
 	public String toString() {
-		return "Card [value=" + value + ", symbol=" + symbol + ", numbericalValue=" + numbericalValue + "]";
+		return "Card [value=" + value + ", symbol=" + symbol + ", trueValue=" + trueValue + "]";
 	}
 	
 	

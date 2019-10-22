@@ -1,23 +1,11 @@
 package sprink.casino.com;
 
 public enum Value {
-	
-	ONE,
-	TWO,
-	THREE,
-	FOUR,
-	FIVE,
-	SIX,
-	SEVEN,
-	EIGHT,
-	NINE,
-	TEN,
-	JACK,
-	QUEEN,
-	KING;
-	
+
+	ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, JOKER, CUT;
+
 	public int getValue() {
-		
+
 		if (this == Value.ONE) {
 			return 1;
 		} else if (this == Value.TWO) {
@@ -36,10 +24,12 @@ public enum Value {
 			return 8;
 		} else if (this == Value.NINE) {
 			return 9;
-		} else {
+		} else if (this == Value.TEN || this == Value.JACK || this == Value.QUEEN || this == Value.KING) {
 			return 0;
-		} 
-		
+		} else {
+			return -1; 
+		}
+
 	}
 
 }

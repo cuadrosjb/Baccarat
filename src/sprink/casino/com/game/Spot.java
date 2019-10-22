@@ -3,7 +3,6 @@ package sprink.casino.com.game;
 import java.util.List;
 
 import sprink.casino.com.Card;
-import sprink.casino.com.GameStatus;
 
 public interface Spot {
 	
@@ -11,7 +10,11 @@ public interface Spot {
 	
 	public boolean isNatural();
 	
-	public int handValue();
+	public int value();
+	
+	public void add(Card card);
+
+	public Card getThirdCard();
 	
 
 }

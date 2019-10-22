@@ -5,6 +5,7 @@ public enum Symbol {
 	HEARTS,
 	SPADES,
 	DIAMONDS,
-	CLUBS
+	CLUBS,
+	UNKNOWN;
 		
 }

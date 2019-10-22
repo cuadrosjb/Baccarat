@@ -14,13 +14,15 @@ public class DeckBuilder {
 		List<Card> deck = new ArrayList<Card>();
 
 		for (Symbol symbol : Symbol.values()) {
-			for (Value value : Value.values()) {
-				Card card = new Card(value, symbol, value.getValue());
-				deck.add(card);
+			if (symbol != Symbol.UNKNOWN) {
+				for (Value value : Value.values()) {
+					if (value != Value.CUT && value != Value.JOKER) {
+						Card card = new Card(value, symbol, value.getValue());
+						deck.add(card);
+					}
+				}
 			}
 		}
-		
-		return  new Deck(deck);
+		return new Deck(deck);
 	}
-
 }
